@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row g-0">
+      <!-- gutter က column တစ်ခုနဲ့တစ်ခုကြားအကွာအဝေး -->
+      <!-- g-0 ဆိုတာက row မှာရှိတဲ့ padding margin တွေကိုဖြုတ်ချလိုက်တာပါ  -->
+      <!--Start slideNavgation Bar  -->
+      <nav class="col-2 bg-light pe-3">
+        <!-- Start logo and logoName -->
+        <h1 class="h4 py-3 text-center text-primary">
+          <i class="fas fa-book-open me-2"></i>
+          <span class="d-none d-lg-inline">
+            <!-- !ဒီမှာဆိုလည်း d-none d-lg-inline က အသက်ပါ -->
+            ADMIN
+          </span>
+        </h1>
+        <!-- End logo and logoName -->
+        <!--Start menu item -->
+        <!-- !ဒီ menu-item အပိုင်းမှာဆို list-group က အသက်ပါ -->
+        <div class="list-group text-center text-lg-start">
+          <span class="list-group-item disabled d-none d-lg-block">
+            <small>CONTROLS</small>
+          </span>
+          <a href="index.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-home"></i>
+            <span class="d-none d-lg-inline">Dashboard</span>
+          </a>
+          <a href="showclient.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-user-lock"></i>
+            <span class="d-none d-lg-inline">Client</span>
+          </a>
+          <a href="showuser.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-users"></i>
+            <span class="d-none d-lg-inline">Users</span>
+          </a>
+          <a href="createuser.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-user-edit"></i>
+            <span class="d-none d-lg-inline">Create User</span>
+          </a>
+        </div>
+        <div class="list-group mt-4 text-center text-lg-start">
+          <span class="list-group-item disabled d-none d-lg-block">
+            <small>COMICS</small>
+          </span>
+          <a href="showcomics.html" class="list-group-item list-group-item-action">
+            <i class="fas fa-book-open-reader"></i>
+            <span class="d-none d-lg-inline">Comics</span>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action active">
+            <i class="fas fa-book"></i>
+            <span class="d-none d-lg-inline">Create Comics</span>
+          </a>
+
+        </div>
+
+
+        <!-- list-group-item ဆိုတာက နိုပ်လို့ရတဲ့ link မှန်းပေါ်လွင်အောင် 
+        ပြတာ တနည်းအားဖြင့် အဲ့ကောင်မပါရင် hover ထောက်ရင် အပြာတွေပေါ်နေလိမ့်မယ် အဲ့ကောင်ထည့်လိုက်ရင် ပိုမိုက်တယ်
+        -->
+        <!--End menu item -->
+      </nav>
+      <!--End slideNavgation Bar  -->
+      <!-- Start MainNav Bar -->
+      <main class="col-10">
+        <!-- Start  navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="flex-fill"></div>
+
+          <!-- !flex-fill ဆိုတာက menu ကို ညာဘက်ခြမ်းကပ်ပေါ်ချင်လို့ ပေးခြင်း -->
+
+          <div class="navbar nav">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <i class="fas fa-user-circle"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="updateUser.html" class="dropdown-item">User Profile</a>
+                </li>
+                <li>
+                  <a href="adminlogin.html" class="dropdown-item">Logout</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"><i class="fas fa-cog"></i></a>
+            </li>
+
+          </div>
+        </nav>
+        <!-- End  navbar -->
+        <div class="container-fluid mt-3 p-4 showusers">
+          <form class=" p-5 rounded-1">
+            <h2 class="col-md-6 offset-md-2 mb-5 mt-4">Comics Registration</h2>
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="name" class="col-md-2 col-form-label">Name</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="email" value="Berserk">
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="Passowrd" class="col-md-2 col-form-label">Alternative</label>
+              <div class="col-md-4">
+                <input type="text" class="form-control" id="name" value="">
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="confirmPassword" class="col-md-2 col-form-label">Status</label>
+              <div class="col-md-4">
+                <input type="password" class="form-control" id="confirmPassword" value="user123">
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="userRole" class="col-md-2 col-form-label">Genres</label>
+              <div class="col-md-4">
+                <input type="checkbox">Adventure
+                <input type="checkbox">Action
+                <input type="checkbox">Romance
+                <input type="checkbox">Fantasy
+                <input type="checkbox">Horror
+                <input type="checkbox">Supernatural
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="userRole" class="col-md-2 col-form-label">Date</label>
+              <div class="col-md-4">
+                <input type="date" class="form-control" id="confirmPassword" value="user123">
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="userRole" class="col-md-2 col-form-label">Rating</label>
+              <div class="col-md-4">
+                <select name="" id="">
+                  <option value="">1</option>
+                  <option value="">2</option>
+                  <option value="">3</option>
+                  <option value="">4</option>
+                  <option value="">5</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-2"></div>
+              <label for="userRole" class="col-md-2 col-form-label">Rating</label>
+              <div class="col-md-4">
+                <input type="file" multiple>
+              </div>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-4"></div>
+              <div class="col-md-6">
+                <button type="submit" class="btn btn-success col-md-2" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Add</button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <footer class="text-center py-4 text-muted">
+        &copy; Copyright 2020
+      </footer>
+      <!-- End mainNav bar -->
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
